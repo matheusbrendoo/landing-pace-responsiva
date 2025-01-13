@@ -8,14 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centraliza horizontalmente */
             align-items: center; /* Centraliza verticalmente */
             height: 100vh;
             margin: 0;
-            background: url('iqtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
+            background: url('qtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
             background-size: cover;
             color: white;
-            padding-top: 100px; /* Adiciona espaço na parte superior para posicionar mais para baixo */
         }
 
         /* Para dispositivos com largura menor que 600px (celulares) */
@@ -34,29 +33,28 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 72%; /* Reduzido 20% (de 90% para 72%) */
             max-width: 320px; /* Limita o tamanho da caixa */
-            margin-top: 100px; /* Move a caixa mais para baixo */
         }
 
         input[type="password"] {
-            padding: 3.2px; /* 60% de 8px */
-            font-size: 5.6px; /* 60% de 14px */
+            padding: 4.16px; /* 30% maior que 3.2px */
+            font-size: 7.28px; /* 30% maior que 5.6px */
             margin-bottom: 20px;
             border: 1px solid #555;
             border-radius: 4px;
-            width: 100%;
+            width: 50%; /* Diminui a largura para 50% */
             background-color: #444;
             color: white;
         }
 
         button {
-            padding: 3.2px 6.4px; /* 60% de 8px e 16px */
-            font-size: 5.6px; /* 60% de 14px */
+            padding: 5.12px 9.6px; /* 30% maior que 3.2px e 6.4px */
+            font-size: 7.28px; /* 30% maior que 5.6px */
             background-color: #000; /* Cor preta para o botão */
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%; /* Ajusta para telas menores */
+            width: 50%; /* Diminui a largura para 50% */
         }
 
         button:hover {
