@@ -12,7 +12,7 @@
             align-items: flex-start; /* Muda de 'center' para 'flex-start' para mover para cima */
             height: 100vh;
             margin: 0;
-            background: url('qtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
+            background: url('iqtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
             background-size: cover;
             color: white;
             padding-top: 100px; /* Adiciona espaço na parte superior para posicionar mais para baixo */
@@ -32,14 +32,14 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 90%; /* Responsivo para celulares */
-            max-width: 400px; /* Limita o tamanho em telas grandes */
+            width: 72%; /* Reduzido 20% (de 90% para 72%) */
+            max-width: 320px; /* Limita o tamanho da caixa */
             margin-top: 100px; /* Move a caixa mais para baixo */
         }
 
         input[type="password"] {
-            padding: 8px;
-            font-size: 14px; /* Diminui o tamanho da fonte do campo de senha */
+            padding: 3.2px; /* 60% de 8px */
+            font-size: 5.6px; /* 60% de 14px */
             margin-bottom: 20px;
             border: 1px solid #555;
             border-radius: 4px;
@@ -49,8 +49,8 @@
         }
 
         button {
-            padding: 8px 16px; /* Botão menor */
-            font-size: 14px; /* Tamanho da fonte do botão menor */
+            padding: 3.2px 6.4px; /* 60% de 8px e 16px */
+            font-size: 5.6px; /* 60% de 14px */
             background-color: #000; /* Cor preta para o botão */
             color: white;
             border: none;
@@ -86,7 +86,7 @@
             setTimeout(() => {
                 suspenseMessage.innerText = "Acesso negado! Tente novamente.";
                 suspenseMessage.style.color = "red";
-            }, 3000); // Mostra a mensagem após 3 segundos
+            }, 2000); // Mostra a mensagem após 2 segundos
         }
     </script>
 </body>
