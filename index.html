@@ -9,12 +9,13 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Muda de 'center' para 'flex-start' para mover para cima */
             height: 100vh;
             margin: 0;
             background: url('qtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
             background-size: cover;
             color: white;
+            padding-top: 100px; /* Adiciona espaço na parte superior para posicionar mais para baixo */
         }
 
         /* Para dispositivos com largura menor que 600px (celulares) */
@@ -27,17 +28,18 @@
 
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente para destacar o conteúdo */
+            background: rgba(0, 0, 0, 0.8); /* Caixa de "Acesso Restrito" preta */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 90%; /* Responsivo para celulares */
             max-width: 400px; /* Limita o tamanho em telas grandes */
+            margin-top: 100px; /* Move a caixa mais para baixo */
         }
 
         input[type="password"] {
-            padding: 10px;
-            font-size: 16px;
+            padding: 8px;
+            font-size: 14px; /* Diminui o tamanho da fonte do campo de senha */
             margin-bottom: 20px;
             border: 1px solid #555;
             border-radius: 4px;
@@ -47,9 +49,9 @@
         }
 
         button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007BFF;
+            padding: 8px 16px; /* Botão menor */
+            font-size: 14px; /* Tamanho da fonte do botão menor */
+            background-color: #000; /* Cor preta para o botão */
             color: white;
             border: none;
             border-radius: 4px;
@@ -58,7 +60,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #333; /* Cor mais clara para o hover */
         }
 
         @media (max-width: 600px) {
@@ -84,7 +86,7 @@
             setTimeout(() => {
                 suspenseMessage.innerText = "Acesso negado! Tente novamente.";
                 suspenseMessage.style.color = "red";
-            }, 2000); // Mostra a mensagem após 2 segundos
+            }, 3000); // Mostra a mensagem após 3 segundos
         }
     </script>
 </body>
