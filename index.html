@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digite a Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            width: 100%;
+            background-color: #444;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Acesso Restrito</h2>
+        <p>Digite a senha para continuar:</p>
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="showSuspense()">Entrar</button>
+        <p id="suspense" style="color: #ffcc00; display: none;">Processando...</p>
+    </div>
+
+    <script>
+        function showSuspense() {
+            const suspenseMessage = document.getElementById('suspense');
+            suspenseMessage.style.display = "block";
+            setTimeout(() => {
+                suspenseMessage.innerText = "Acesso negado! Tente novamente.";
+                suspenseMessage.style.color = "red";
+            }, 2000); // Mostra a mensagem após 2 segundos
+        }
+    </script>
+</body>
+</html>
