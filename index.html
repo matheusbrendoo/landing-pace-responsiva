@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QTRIX</title>
+    <title>Acesso Restrito</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: url('qtrix-pc.jpg') no-repeat center center fixed; /* Imagem padrão para desktop */
+            background: url('qtrix-pc.png') no-repeat center center fixed; /* Imagem padrão para desktop */
             background-size: cover;
             color: white;
         }
@@ -21,7 +21,7 @@
         /* Para dispositivos com largura menor que 600px (celulares) */
         @media (max-width: 600px) {
             body {
-                background: url('qtrix-cel.jpg') no-repeat center center fixed; /* Imagem para celular */
+                background: url('qtrix-cel.png') no-repeat center center fixed; /* Imagem para celular */
                 background-size: cover;
             }
         }
@@ -71,6 +71,12 @@
             font-size: 12px;
         }
 
+        footer img {
+            width: 24px; /* Define o tamanho da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-bottom: 4px; /* Espaço entre a imagem e o texto */
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 15px; /* Ajusta o espaçamento em telas pequenas */
@@ -80,7 +86,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Limited Access</h2>
+        <h2>Acesso Restrito</h2>
         <p>Digite a senha para continuar:</p>
         <input type="password" id="password" placeholder="Senha">
         <button onclick="showSuspense()">Entrar</button>
@@ -88,7 +94,8 @@
     </div>
 
     <footer>
-        Copyright QTRIX - 2025. All Rights reserved.
+        <img src="q-log.png" alt="Logo QTRIX">
+        <p>Copyright QTRIX - 2025. Todos os direitos reservados.</p>
     </footer>
 
     <script>
