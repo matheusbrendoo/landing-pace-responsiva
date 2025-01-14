@@ -71,6 +71,12 @@
             height: auto; /* Mantém a proporção */
             margin-bottom: 8px; /* Espaço entre a logo e o texto */
         }
+		
+		/* Adicionando a borda superior no celular */
+        @media (max-width: 600px) {
+            body {
+                border-top: 2px solid #000; /* Borda superior preta no celular */
+            }
 
         @media (min-width: 601px) {
             .header-image {
