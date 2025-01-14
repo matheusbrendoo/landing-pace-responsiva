@@ -13,6 +13,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 20px; /* Adiciona um pequeno espaço no topo */
+            border-top: 2px solid #000; /* Borda preta no topo */
         }
 
         .header-image {
@@ -74,15 +76,6 @@
 		
 		/* Adicionando a borda superior no celular */
         @media (max-width: 600px) {
-            body {
-                border-top: 2px solid #000; /* Borda superior preta no celular */
-            }
-
-        @media (min-width: 601px) {
-            .header-image {
-                height: 300px; /* Altura maior para desktops */
-            }
-
             footer img {
                 width: 96px; /* 50% maior que o tamanho padrão (64px) */
             }
