@@ -64,8 +64,6 @@
             width: 100%;
             color: white;
             font-size: 12px;
-            border-top: 2px solid #000; /* Borda superior preta no rodapé */
-            padding-top: 8px;
         }
 
         footer img {
@@ -73,25 +71,20 @@
             height: auto; /* Mantém a proporção */
             margin-bottom: 8px; /* Espaço entre a logo e o texto */
         }
-
-        /* Adicionando a borda superior no celular */
+		
+		/* Adicionando a borda superior no celular */
         @media (max-width: 600px) {
             body {
                 border-top: 2px solid #000; /* Borda superior preta no celular */
             }
 
+        @media (min-width: 601px) {
             .header-image {
                 height: 300px; /* Altura maior para desktops */
             }
 
             footer img {
                 width: 96px; /* 50% maior que o tamanho padrão (64px) */
-            }
-        }
-
-        @media (min-width: 601px) {
-            .header-image {
-                height: 300px; /* Altura maior para desktops */
             }
         }
     </style>
