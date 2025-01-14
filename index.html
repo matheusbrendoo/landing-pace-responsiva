@@ -7,23 +7,17 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #000; /* Fundo preto */
+            color: white;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: url('qtrix-pc.jpg') no-repeat center center fixed; /* Imagem padrão para desktop */
-            background-size: cover;
-            color: white;
         }
 
-        /* Para dispositivos com largura menor que 600px (celulares) */
-        @media (max-width: 600px) {
-            body {
-                background: url('qtrix-cel.jpg') no-repeat center center fixed; /* Imagem para celular */
-                background-size: cover;
-            }
+        .header-image {
+            width: 100%; /* Ocupa toda a largura da tela */
+            height: auto; /* Mantém a proporção da imagem */
         }
 
         .container {
@@ -34,6 +28,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 72%; /* Reduzido 20% (de 90% para 72%) */
             max-width: 320px; /* Limita o tamanho da caixa */
+            margin-top: 20px; /* Distância da imagem superior */
         }
 
         input[type="password"] {
@@ -72,19 +67,26 @@
         }
 
         footer img {
-            width: 64px; /* Aumentado de 24px para 64px */
-            height: auto; /* Mantém a proporção da imagem */
-            margin-bottom: 8px; /* Espaço maior entre a imagem e o texto */
+            width: 64px; /* Tamanho padrão da logo */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 8px; /* Espaço entre a logo e o texto */
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px; /* Ajusta o espaçamento em telas pequenas */
+        @media (min-width: 601px) {
+            .header-image {
+                height: 300px; /* Altura maior para desktops */
+            }
+
+            footer img {
+                width: 96px; /* 50% maior que o tamanho padrão (64px) */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Imagem grande no topo -->
+    <img src="topo.png" alt="Imagem do topo" class="header-image">
+
     <div class="container">
         <h2>Acesso Restrito</h2>
         <p>Digite a senha para continuar:</p>
@@ -94,7 +96,7 @@
     </div>
 
     <footer>
-        <img src="q-log.png" alt="Logo QTRIX">
+        <img src="logo.png" alt="Logo QTRIX"> <!-- Logo acima do texto -->
         <p>Copyright QTRIX - 2025. Todos os direitos reservados.</p>
     </footer>
 
