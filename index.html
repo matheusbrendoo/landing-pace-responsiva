@@ -19,6 +19,7 @@
 
         .header-image {
             width: 100%; /* Ocupa toda a largura da tela */
+		max-width: 600px;
             height: auto; /* Mantém a proporção da imagem */
         }
 
@@ -75,9 +76,9 @@
         }
 		
 		/* Adicionando a borda superior no celular */
-        @media (max-width: 600px) {
+        @media screen (max-width: 768px) {
             footer img {
-                width: 96px; /* 50% maior que o tamanho padrão (64px) */
+                max-width: 100%;
             }
         }
     </style>
